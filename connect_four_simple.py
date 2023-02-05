@@ -92,12 +92,16 @@ def win():
         return True
     return False
 
-player = 1 # 1 - red, 2 - yellow
-while not win():
-    col = int(input('Enter a column: '))
-    fillIn(col, player)
-    printBoard()
-    if player == 1:
-        player = 2
-    else:
-        player = 1
+def game():
+    player = 1 # 1 - red, 2 - yellow
+    while not win():
+        col = int(input('Enter a column: '))
+        fillIn(col, player)
+        printBoard()
+        if player == 1:
+            player = 2
+        else:
+            player = 1
+        
+if __name__ == "__main__":
+    game()
